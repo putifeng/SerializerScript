@@ -1,0 +1,32 @@
+
+public class CLASSTYPE_NAME_SerializerTool : SerializerScript.ISerializerObject<CLASSTYPENAME>
+{
+	public CLASSTYPENAME Read(SerializerScript.Internal.ReaderHelper read)
+	{
+		bool isNew = false;
+		CLASSTYPENAME ret = default(CLASSTYPENAME);
+		int field = 0;
+		while ((field = read.ReadFieldHeader()) > 0)
+		{
+			if (isNew == false)
+			{
+				ret = new CLASSTYPENAME();
+				isNew = true;
+			} 
+				
+			switch (field) 
+ 			{
+READ_CASE_LOGIC
+				default:
+					read.SkipField();
+					break;  			
+			} 
+		} 
+ 		return ret;
+	}
+	
+	public void Write(CLASSTYPENAME obj, SerializerScript.Internal.WriterHelper write)
+	{
+WRITE_LOGIC
+	}
+}

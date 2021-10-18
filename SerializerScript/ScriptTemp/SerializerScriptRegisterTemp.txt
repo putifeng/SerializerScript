@@ -1,0 +1,21 @@
+
+/// auto genater code ,dot no ediot this scrpit.
+
+using SerializerScript;
+
+namespace SerializerScript.AutoGenaterCode
+{
+
+	public static partial class AutoRegisterTool
+	{
+		static AutoRegisterTool()
+		{
+			RegisterAll();
+		}
+		
+		static void RegisterAll()
+		{
+REGISTER_ALL_CODE	
+		}
+	}
+}
